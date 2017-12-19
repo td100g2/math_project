@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="accountant_2.Controller">
+   <children>
+      <DatePicker fx:id="txNachalnaData" editable="false" layoutX="134.0" layoutY="175.0" promptText="ММ/ДД/ГГГГ" />
+      <RadioButton fx:id="planOneYear" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#planOneYearClicked" selected="true" text="1 година">
+         <toggleGroup>
+            <ToggleGroup fx:id="Plan" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="planSixMonths" layoutX="132.0" layoutY="14.0" mnemonicParsing="false" onAction="#sixMonthsClicked" text="6 месеца" toggleGroup="$Plan" />
+      <RadioButton fx:id="planOneMonth" layoutX="252.0" layoutY="14.0" mnemonicParsing="false" onAction="#planOneMonthClicked" text="1 месец" toggleGroup="$Plan" />
+      <TextField fx:id="txLihva" layoutX="135.0" layoutY="86.0" prefHeight="26.0" prefWidth="197.0" promptText="лихва в %" />
+      <Label layoutX="75.0" layoutY="87.0" text="Лихва" />
+      <Label layoutX="75.0" layoutY="121.0" text="Вноска" />
+      <TextField fx:id="txVnoska" layoutX="135.0" layoutY="120.0" prefHeight="26.0" prefWidth="197.0" promptText="вноска" />
+      <Label layoutX="17.0" layoutY="180.0" text="Дата на вноска" />
+      <Label layoutX="13.0" layoutY="217.0" text="Дата на теглене" />
+      <DatePicker fx:id="txKraynaData" editable="false" layoutX="134.0" layoutY="212.0" promptText="ММ/ДД/ГГГГ" />
+      <TextField fx:id="txResult" alignment="CENTER" editable="false" layoutX="218.0" layoutY="322.0" style="-fx-background-color: #7FFFD4;" />
+      <Button fx:id="btCalculate" layoutX="253.0" layoutY="360.0" mnemonicParsing="false" onAction="#calculateButtonClicked" text="Пресметни" />
+      <ImageView fitHeight="152.0" fitWidth="244.0" layoutX="346.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@java_icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
